@@ -6,25 +6,52 @@
 
     <title>Bangalore Dental Clinic Rajajinagar | Dr Dhanu Dentist Bangalore</title>
     <meta name="description" content="Bangalore Dental Clinic Rajajinagar. Dr Dhanu Pediatric Dentist with 28 years experience. Root Canal, Implants, Teeth Whitening.">
-    <meta name="keywords" content="Dentist Rajajinagar, Dental Clinic Bangalore, Root Canal Bangalore, Pediatric Dentist Bangalore">
 
     <style>
         body {
-            font-family: Arial;
+            font-family: 'Segoe UI', Arial;
             margin: 0;
-            background-color: #f4f9ff;
+            background: #f6fbff;
+            color: #333;
         }
 
-        header {
-            background-color: #0077b6;
+        /* HEADER */
+        .header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
             color: white;
-            padding: 15px;
-            text-align: center;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .header-left p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-right img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
         }
 
         /* NAVBAR */
         nav {
-            background-color: #023e8a;
+            background: #023e8a;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -33,22 +60,21 @@
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-around;
             margin: 0;
-            padding: 10px;
-            overflow-x: auto;
+            padding: 12px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 14px;
         }
 
         /* HERO */
         .hero {
-            height: 550px;
+            height: 350px;
             position: relative;
             overflow: hidden;
         }
@@ -83,151 +109,182 @@
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
-            background: rgba(0,0,0,0.4);
-            padding: 30px;
+            background: rgba(0,0,0,0.45);
+            padding: 20px;
             border-radius: 10px;
         }
 
         .btn {
-            background-color: #00b4d8;
+            background: #00b4d8;
             color: white;
             padding: 12px 18px;
             text-decoration: none;
             border-radius: 6px;
-            margin: 5px;
             display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
         }
 
         .section {
-            padding: 50px 20px;
+            padding: 40px 15px;
             text-align: center;
         }
 
         /* SERVICES */
         .services {
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .service-card {
             background: white;
-            width: 250px;
-            box-shadow: 0px 0px 10px #ccc;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
             overflow: hidden;
         }
 
         .service-card img {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
+        }
+
+        .service-card h3 {
+            padding: 10px;
+            color: #0077b6;
         }
 
         /* DOCTOR */
         .doctor {
-            max-width: 800px;
-            margin: auto;
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            text-align: left;
+            flex-direction: column;
+            align-items: center;
         }
 
         .doctor img {
-            width: 220px;
-            border-radius: 10px;
+            width: 200px;
+            border-radius: 12px;
+            margin-bottom: 10px;
         }
 
         /* REVIEWS */
         .review {
             background: white;
-            padding: 20px;
-            margin: 10px;
+            padding: 15px;
+            margin: 10px auto;
             border-radius: 10px;
-            display: inline-block;
-            width: 250px;
-            box-shadow: 0px 0px 10px #ccc;
+            width: 90%;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
         }
 
         /* FORM */
         form input, form textarea {
             display: block;
-            width: 250px;
+            width: 90%;
             margin: 10px auto;
-            padding: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 20px;
             background: #0077b6;
             color: white;
             border: none;
+            border-radius: 6px;
+            font-size: 16px;
         }
 
-        /* GALLERY GRID */
+        /* GALLERY */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            max-width: 900px;
-            margin: auto;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
 
         .gallery img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0px 0px 8px #bbb;
         }
 
         /* FLOAT BUTTONS */
         .whatsapp {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 15px;
             background: #25D366;
             color: white;
-            padding: 15px;
+            padding: 14px;
             border-radius: 50px;
             text-decoration: none;
+            font-size: 14px;
         }
 
         .call {
             position: fixed;
-            bottom: 80px;
-            right: 20px;
+            bottom: 75px;
+            right: 15px;
             background: #0077b6;
             color: white;
-            padding: 15px;
+            padding: 14px;
             border-radius: 50px;
             text-decoration: none;
+            font-size: 14px;
         }
 
         footer {
-            background-color: #023e8a;
+            background: #023e8a;
             color: white;
             text-align: center;
             padding: 15px;
+            margin-top: 20px;
         }
 
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .hero { height: 350px; }
-            .service-card { width: 90%; }
-            .doctor { text-align: center; }
-            .gallery { grid-template-columns: repeat(1, 1fr); }
-        }
+        /* DESKTOP */
+        @media (min-width: 768px) {
+            .hero { height: 550px; }
 
+            .services {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .service-card {
+                width: 250px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .doctor {
+                flex-direction: row;
+                gap: 20px;
+                justify-content: center;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>The Bangalore Dental Clinic</h1>
-    <p>Dr. Dhanu – Pediatric Dentist | Rajajinagar Bangalore</p>
+<header class="header">
+    <div class="header-left">
+        <h1>The Bangalore Dental Clinic</h1>
+        <p>Your Smile, Our Responsibility</p>
+    </div>
+
+    <div class="header-right">
+        <img src="doctor.jpg">
+        <div>
+            <strong>Dr. Dhanu</strong><br>
+            Pediatric Dentist
+        </div>
+    </div>
 </header>
 
 <nav>
@@ -235,8 +292,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#doctor">Doctor</a></li>
-        <li><a href="#appointment">Appointment</a></li>
-        <li><a href="#contact">Location</a></li>
+        <li><a href="#appointment">Book</a></li>
+        <li><a href="#contact">Map</a></li>
     </ul>
 </nav>
 
@@ -274,7 +331,7 @@
             <p>Pediatric Dentist, Dentist</p>
             <p>28 Years Experience</p>
             <p>MDS - Pedodontics</p>
-            <p>Member Indian Dental Association</p>
+            <p>Indian Dental Association Member</p>
         </div>
     </div>
 </div>
@@ -310,11 +367,10 @@
 <!-- MAP -->
 <div class="section" id="contact">
     <h2>Our Location</h2>
-    <iframe src="https://maps.google.com/maps?q=Rajajinagar Bangalore&output=embed"
-            width="80%" height="300"></iframe>
+    <iframe src="https://maps.google.com/maps?q=Rajajinagar Bangalore&output=embed" height="300" width="100%"></iframe>
 </div>
 
-<!-- GALLERY GRID -->
+<!-- GALLERY -->
 <div class="section">
     <h2>Clinic Gallery</h2>
     <div class="gallery">
@@ -331,7 +387,6 @@
     <p>© Bangalore Dental Clinic</p>
 </footer>
 
-<!-- FLOAT BUTTONS -->
 <a href="tel:+919XXXXXXXXX" class="call">Call</a>
 <a href="https://wa.me/919XXXXXXXXX" class="whatsapp">WhatsApp</a>
 
