@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bangalore Dental Clinic</title>
+
+    <title>Bangalore Dental Clinic Rajajinagar | Dr Dhanu Dentist Bangalore</title>
+    <meta name="description" content="Bangalore Dental Clinic Rajajinagar. Dr Dhanu Pediatric Dentist with 28 years experience. Root Canal, Implants, Teeth Whitening.">
+    <meta name="keywords" content="Dentist Rajajinagar, Dental Clinic Bangalore, Root Canal Bangalore, Pediatric Dentist Bangalore">
 
     <style>
         body {
@@ -37,19 +40,13 @@
             overflow-x: auto;
         }
 
-        nav ul li {
-            flex: 0 0 auto;
-        }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 8px 12px;
-            display: block;
         }
 
-        /* HERO COLLAGE */
+        /* HERO */
         .hero {
             height: 550px;
             position: relative;
@@ -94,10 +91,11 @@
         .btn {
             background-color: #00b4d8;
             color: white;
-            padding: 14px 22px;
+            padding: 12px 18px;
             text-decoration: none;
             border-radius: 6px;
-            font-size: 18px;
+            margin: 5px;
+            display: inline-block;
         }
 
         .section {
@@ -127,24 +125,85 @@
             object-fit: cover;
         }
 
-        .service-card h3 {
-            padding: 15px;
+        /* DOCTOR */
+        .doctor {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: left;
         }
 
-        /* GALLERY */
+        .doctor img {
+            width: 220px;
+            border-radius: 10px;
+        }
+
+        /* REVIEWS */
+        .review {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 250px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        /* FORM */
+        form input, form textarea {
+            display: block;
+            width: 250px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #0077b6;
+            color: white;
+            border: none;
+        }
+
+        /* GALLERY GRID */
         .gallery {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
         }
 
         .gallery img {
-            width: 250px;
-            height: 180px;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0px 0px 8px #bbb;
+        }
+
+        /* FLOAT BUTTONS */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        .call {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #0077b6;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
         }
 
         footer {
@@ -156,37 +215,10 @@
 
         /* MOBILE */
         @media (max-width: 768px) {
-
-            .hero {
-                height: 350px;
-            }
-
-            .hero-text {
-                width: 80%;
-                padding: 15px;
-            }
-
-            .hero-text h1 {
-                font-size: 22px;
-            }
-
-            .service-card {
-                width: 90%;
-            }
-
-            .gallery img {
-                width: 90%;
-                height: auto;
-            }
-
-            header h1 {
-                font-size: 22px;
-            }
-
-            .btn {
-                font-size: 14px;
-                padding: 10px 14px;
-            }
+            .hero { height: 350px; }
+            .service-card { width: 90%; }
+            .doctor { text-align: center; }
+            .gallery { grid-template-columns: repeat(1, 1fr); }
         }
 
     </style>
@@ -195,19 +227,20 @@
 
 <header>
     <h1>The Bangalore Dental Clinic</h1>
-    <p>Your Smile, Our Responsibility</p>
+    <p>Dr. Dhanu – Pediatric Dentist | Rajajinagar Bangalore</p>
 </header>
 
 <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">Doctor</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#contact">Location</a></li>
     </ul>
 </nav>
 
-<!-- HERO COLLAGE -->
+<!-- HERO -->
 <div class="hero">
     <img src="photo5.jpg">
     <img src="photo1.jpg">
@@ -217,53 +250,90 @@
 
     <div class="hero-text">
         <h1>Beautiful Smiles Start Here</h1>
-        <p>Advanced Dental Care in Bangalore</p>
-        <br>
-        <a class="btn" href="#">Book Appointment</a>
+        <a href="#appointment" class="btn">Book Appointment</a>
     </div>
 </div>
 
 <!-- SERVICES -->
-<div class="section">
+<div class="section" id="services">
     <h2>Our Services</h2>
     <div class="services">
-        <div class="service-card">
-            <img src="cleaning.jpg">
-            <h3>Teeth Cleaning</h3>
-        </div>
+        <div class="service-card"><img src="cleaning.jpg"><h3>Teeth Cleaning</h3></div>
+        <div class="service-card"><img src="rootcanal.jpg"><h3>Root Canal</h3></div>
+        <div class="service-card"><img src="implant.jpg"><h3>Dental Implants</h3></div>
+        <div class="service-card"><img src="whitening.jpg"><h3>Teeth Whitening</h3></div>
+    </div>
+</div>
 
-        <div class="service-card">
-            <img src="rootcanal.jpg">
-            <h3>Root Canal</h3>
-        </div>
-
-        <div class="service-card">
-            <img src="implant.jpg">
-            <h3>Dental Implants</h3>
-        </div>
-
-        <div class="service-card">
-            <img src="whitening.jpg">
-            <h3>Teeth Whitening</h3>
+<!-- DOCTOR -->
+<div class="section" id="doctor">
+    <h2>Dr. Dhanu</h2>
+    <div class="doctor">
+        <img src="doctor.jpg">
+        <div>
+            <p>Pediatric Dentist, Dentist</p>
+            <p>28 Years Experience</p>
+            <p>MDS - Pedodontics</p>
+            <p>Member Indian Dental Association</p>
         </div>
     </div>
 </div>
 
-<!-- GALLERY -->
+<!-- TIMINGS -->
+<div class="section">
+    <h2>Clinic Timings</h2>
+    <p>Mon - Sat</p>
+    <p>10:30 AM - 01:00 PM</p>
+    <p>05:30 PM - 08:30 PM</p>
+</div>
+
+<!-- REVIEWS -->
+<div class="section">
+    <h2>Patient Reviews</h2>
+    <div class="review">⭐⭐⭐⭐⭐ Very good treatment</div>
+    <div class="review">⭐⭐⭐⭐⭐ Friendly doctor</div>
+    <div class="review">⭐⭐⭐⭐⭐ Best dental clinic</div>
+</div>
+
+<!-- APPOINTMENT -->
+<div class="section" id="appointment">
+    <h2>Book Appointment</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="date" name="date" required>
+        <textarea name="message" placeholder="Treatment"></textarea>
+        <button type="submit">Book Appointment</button>
+    </form>
+</div>
+
+<!-- MAP -->
+<div class="section" id="contact">
+    <h2>Our Location</h2>
+    <iframe src="https://maps.google.com/maps?q=Rajajinagar Bangalore&output=embed"
+            width="80%" height="300"></iframe>
+</div>
+
+<!-- GALLERY GRID -->
 <div class="section">
     <h2>Clinic Gallery</h2>
     <div class="gallery">
-        <img src="photo5.jpg">
         <img src="photo1.jpg">
         <img src="photo2.jpg">
         <img src="photo3.jpg">
         <img src="photo4.jpg">
+        <img src="photo5.jpg">
+        <img src="photo6.jpg">
     </div>
 </div>
 
 <footer>
-    <p>© 2026 The Bangalore Dental Clinic</p>
+    <p>© Bangalore Dental Clinic</p>
 </footer>
+
+<!-- FLOAT BUTTONS -->
+<a href="tel:+919XXXXXXXXX" class="call">Call</a>
+<a href="https://wa.me/919XXXXXXXXX" class="whatsapp">WhatsApp</a>
 
 </body>
 </html>
